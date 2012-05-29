@@ -1,6 +1,11 @@
 #-*- coding:utf-8 -*-
 from django.conf.urls.defaults import patterns, include, url
+from info.views import person, person_edit
+
 urlpatterns = patterns('',
+    url(r'^$', person),
+    url(r'^edit/$', person_edit),
+
     # Examples:
     # url(r'^$', 'about.views.home', name='home'),
     # url(r'^about/', include('about.foo.urls')),

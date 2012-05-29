@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{%block content %}
+    <h3>Имя:</h3> {{info.name}}
+    <h3>Фамилия:</h3> {{info.surname}}
+    <h3>Дата рождения:</h3> {{info.bdate}}
+    <h3>E-mail:</h3> {{info.email}}
+    <h3>Контакты:</h3> {{info.contacts}}
+    <h3>Биография:</h3> {{info.bio}}
+{% endblock %}
+        
+{% block footer %}
+    &nbsp 
+    <a href="edit"> Редактировать</a>
+{% endblock %}        

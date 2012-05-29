@@ -1,0 +1,30 @@
+{% load static %}
+{% get_static_prefix as STATIC_URL %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/style.css" type="text/css" />
+     {% block script %}
+    {% endblock %}
+</head>
+<body>
+
+{% block header %}
+{% endblock %}
+
+<div id="content">
+    {% block content %} {% endblock %}
+</div>
+
+<div id="footer">
+    <hr>
+    <a href="/"> Главная </a>
+    {% block footer %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
