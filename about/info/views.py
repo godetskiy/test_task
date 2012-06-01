@@ -5,9 +5,11 @@ from django.contrib.auth.decorators import login_required
 from info.models import Person
 from info.forms import PersonForm
 
+
 def person(request):
     info = get_object_or_404(Person)
-    return render_to_response('person.html', {'title':'Информация', 'info': info})
+    return render_to_response('person.html', {'title': 'Информация', 'info': info})
+
 
 @login_required()
 def person_edit(request):

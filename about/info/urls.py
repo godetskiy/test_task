@@ -1,5 +1,5 @@
 #-*- coding:utf-8 -*-
-from django.conf.urls.defaults import patterns, include, url
+from django.conf.urls.defaults import patterns, url
 from info.views import person, person_edit
 
 urlpatterns = patterns('',

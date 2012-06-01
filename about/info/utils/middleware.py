@@ -1,6 +1,7 @@
 #-*- coding:utf-8 -*-
 from info.models import LogRequest
 
+
 class RequestWare:
     def process_request(self, request):
         req = LogRequest(

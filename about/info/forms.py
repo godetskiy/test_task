@@ -3,6 +3,7 @@ from django import forms
 from django.forms import ModelForm
 from info.models import Person
 
+
 class CalendarWidget(forms.TextInput):
     class Media:
         css = {
@@ -14,10 +15,10 @@ class CalendarWidget(forms.TextInput):
               "js/ui.datepicker-ru.js",
         )
 
+
 class PersonForm(ModelForm):
     class Meta:
         model = Person
-
         #get reverse fields_list
         fields_list = list()
         for field in Person._meta.fields:

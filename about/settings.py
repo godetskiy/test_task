@@ -1,6 +1,7 @@
 # Django settings for about project.
 from os import getcwd, path
 
+
 def create_path(name):
     return path.join(getcwd(), name)
 
@@ -15,7 +16,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'sqlite3',    # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': create_path('data.db'),                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
@@ -136,6 +137,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 
     'info',
+    'info.templatetags'
 )
 
 # A sample logging configuration. The only tangible logging

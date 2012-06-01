@@ -19,6 +19,7 @@ class Person(models.Model):
     def __unicode__(self):
         return "%s %s" % (self.surname, self.name)
 
+
 class LogRequest(models.Model):
     datetime = models.DateTimeField(default=datetime.now())
     host = models.CharField(max_length=255)
@@ -27,6 +28,7 @@ class LogRequest(models.Model):
 
     def __unicode__(self):
         return self.datetime
+
 
 class LogModel(models.Model):
     datetime = models.DateTimeField(default=datetime.now())
@@ -44,6 +46,7 @@ def create_edit_handler(instance, created, **kwargs):
     ctype = ContentType.objects.get_for_model(instance)
     l = LogModel(model_name=ctype.model.title().encode(), action=action)
     l.save()
+
 
 @receiver(post_delete, sender=Person)
 @receiver(post_delete, sender=LogRequest)
